@@ -1,0 +1,172 @@
+[
+  {
+    "comments": [
+      {
+        "line": 1,
+        "value": "#Author: ashish.1987.das@gmail.com"
+      },
+      {
+        "line": 2,
+        "value": "#Keywords Summary :"
+      },
+      {
+        "line": 3,
+        "value": "#Feature: List of scenarios."
+      },
+      {
+        "line": 4,
+        "value": "#Scenario: Business Operations on Cart Page."
+      }
+    ],
+    "line": 7,
+    "elements": [
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 12215646700,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.beforestartUp(Scenario)"
+            }
+          }
+        ],
+        "line": 20,
+        "name": "Adding multiple products from the recommendations and Edit the quantity as per requirement",
+        "description": "",
+        "id": "business-operations-on-cart-page.;adding-multiple-products-from-the-recommendations-and-edit-the-quantity-as-per-requirement;;2",
+        "after": [
+          {
+            "result": {
+              "duration": 2354038700,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.after(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 8028357800,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "Open the browser and cart page",
+            "match": {
+              "location": "CartPageSteps.open_the_browser_and_cart_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 19227384900,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "Select the multiple products from the recommendations",
+            "match": {
+              "location": "CartPageSteps.select_the_multiple_products_from_the_recommendations()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 21973100,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "verify the url contains “/cart”",
+            "match": {
+              "location": "CartPageSteps.verify_the_url_contains_cart()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 744293300,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "Getting all product prices and sorting them in descending order",
+            "match": {
+              "location": "CartPageSteps.getting_all_product_prices_and_sorting_them_in_descending_order()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 73064336600,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "Incrementing by one the quantity of the product with the lowest price and Delete the product with the highest price",
+            "match": {
+              "location": "CartPageSteps.incrementing_by_one_the_quantity_of_the_product_with_the_lowest_price_and_delete_the_product_with_the_highest_price()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 623379500,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "Verify that the subtotal and total prices are correct.",
+            "match": {
+              "location": "CartPageSteps.verify_that_the_subtotal_and_total_prices_are_correct()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 25801038400,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "Change the shipping \"Portugal\" with \"5000\".",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Portugal",
+                  "offset": 21
+                },
+                {
+                  "val": "5000",
+                  "offset": 37
+                }
+              ],
+              "location": "CartPageSteps.change_the_shipping_with(String,String)"
+            },
+            "matchedColumns": [
+              0,
+              1
+            ],
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "line": 6,
+            "name": "@zooplus"
+          }
+        ]
+      }
+    ],
+    "name": "Business Operations on Cart Page.",
+    "description": "",
+    "id": "business-operations-on-cart-page.",
+    "keyword": "Feature",
+    "uri": "OperationOnCartPage.feature",
+    "tags": [
+      {
+        "line": 6,
+        "name": "@zooplus"
+      }
+    ]
+  }
+]

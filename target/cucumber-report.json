@@ -1,0 +1,62 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 10454907900,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.setUpBrowser(Scenario)"
+            }
+          }
+        ],
+        "line": 4,
+        "name": "Test the application login",
+        "description": "",
+        "id": "testapplication;test-the-application-login",
+        "after": [
+          {
+            "result": {
+              "duration": 929217600,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.after(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 20533389700,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "Launch and login to the application",
+            "match": {
+              "location": "testSteps.login_to_the_application()"
+            },
+            "keyword": "Given "
+          }
+        ],
+        "tags": [
+          {
+            "line": 3,
+            "name": "@TestApplication"
+          }
+        ]
+      }
+    ],
+    "name": "TestApplication",
+    "description": "",
+    "id": "testapplication",
+    "keyword": "Feature",
+    "uri": "applicationTest.feature"
+  }
+]

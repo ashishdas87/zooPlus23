@@ -1,0 +1,95 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 10764559200,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.setUpBrowser(Scenario)"
+            }
+          }
+        ],
+        "line": 12,
+        "name": "Test the Apis by Automation",
+        "description": "",
+        "id": "testapi;test-the-apis-by-automation;;2",
+        "after": [
+          {
+            "result": {
+              "duration": 814769500,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.after(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 1529574400,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "Post the API \"http://localhost:3000/posts\" With the parameters",
+            "match": {
+              "arguments": [
+                {
+                  "val": "http://localhost:3000/posts",
+                  "offset": 14
+                }
+              ],
+              "location": "testSteps.open_the_API_With_the_parameters(String)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 122400,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "get the Response",
+            "match": {
+              "location": "testSteps.get_the_Response()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 31900,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "Verify the response",
+            "match": {
+              "location": "testSteps.verify_the_response()"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "line": 3,
+            "name": "@TestApi"
+          }
+        ]
+      }
+    ],
+    "name": "TestAPI",
+    "description": "",
+    "id": "testapi",
+    "keyword": "Feature",
+    "uri": "testAPI.feature"
+  }
+]
