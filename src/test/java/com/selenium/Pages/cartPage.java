@@ -111,12 +111,10 @@ public class cartPage {
         }
 
     }
-
+    static String shippingPrice ;
     public static void verifySubtotalTotalPriceOfProducts() throws Exception{
         float subtotalProductPrice=0,totalShippingPrice=0,finalPriceOnCart=0;
         String totalProductPrice="";
-        String shippingPrice ;
-
         List<WebElement> products = driver.findElements(By.xpath(productTotalPrices));
         for (int i=1; i<=products.size();i++) {
             waitForDisplayOfWebElement(By.xpath(prodPrice1 + i + prodPrice2));
@@ -125,13 +123,23 @@ public class cartPage {
             productIndividualPrice = Float.parseFloat(pp[1]);
             subtotalProductPrice = subtotalProductPrice + productIndividualPrice;
             shippingPrice=driver.findElement(By.xpath(shippingCost)).getText();
-            String sp[] = shippingPrice.split("€");
-            totalShippingPrice = Float.parseFloat(sp[1]);
+          if(shippingPrice.contains("Free")==false){
+              String sp[] = shippingPrice.split("€");
+              totalShippingPrice = Float.parseFloat(sp[1]);
+          }
 
         }
-        finalPriceOnCart=subtotalProductPrice+totalShippingPrice;
-        totalProductPrice = driver.findElement(By.xpath(totalPriceOnCart)).getText();
-        Assert.assertEquals(totalProductPrice,"€"+Float.toString(finalPriceOnCart));
+        if(shippingPrice.contains("Free")==false)
+        {
+            finalPriceOnCart = subtotalProductPrice + totalShippingPrice;
+            totalProductPrice = driver.findElement(By.xpath(totalPriceOnCart)).getText();
+            Assert.assertEquals(totalProductPrice, "€" + Float.toString(finalPriceOnCart));
+        }
+        else {
+            finalPriceOnCart = subtotalProductPrice ;
+            totalProductPrice = driver.findElement(By.xpath(totalPriceOnCart)).getText();
+            Assert.assertEquals(totalProductPrice, "€" + Float.toString(finalPriceOnCart));
+        }
     }
 
     public static void changeShippingCountryAndPostCode (String country,String postcode)throws InterruptedException{
